@@ -3,26 +3,26 @@ class Cephi < Formula
 
   desc "Cephalopodic CLI for discovering and invoking taps through the API"
   homepage "https://github.com/cephalopodic/releases"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   host_os = RUBY_PLATFORM
   host_cpu = RbConfig::CONFIG.fetch("host_cpu")
 
   if host_os.include?("darwin") && host_cpu.match?(/arm|aarch64/)
-    archive = "cephi-0.3.0-aarch64-apple-darwin.tar.gz"
-    checksum = "2e10b7907bffd87463c8df5e0bc623271f9bd4bdc4064a1732e3812cdb2d52c6"
+    archive = "cephi-0.3.1-aarch64-apple-darwin.tar.gz"
+    checksum = "0deee44eea9fec36211a41a780f922b8674a6b8a0ad13544bb4b9021cca4331f"
   elsif host_os.include?("darwin") && host_cpu == "x86_64"
-    archive = "cephi-0.3.0-x86_64-apple-darwin.tar.gz"
-    checksum = "391dc6c1f590826d5dec04328b1ef6f74e782e4941ef088252c82b68074941a3"
+    archive = "cephi-0.3.1-x86_64-apple-darwin.tar.gz"
+    checksum = "632c74956677832aed395d1a2babf5264e6dfadbfc664e0d12a27bd6f6e5160c"
   elsif host_os.include?("linux")
-    archive = "cephi-0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-    checksum = "225e19b0ffab7b4dbb400275fec996d13f41c73b8332a042afe24dc9fbf41c95"
+    archive = "cephi-0.3.1-x86_64-unknown-linux-gnu.tar.gz"
+    checksum = "d4a95bba5417e92ecf1fef4896b50c32fbfb78f55f5afcfc028476ef075e0674"
   else
     raise "Unsupported platform for cephi: #{host_os} / #{host_cpu}"
   end
 
-  url "https://github.com/cephalopodic/releases/releases/download/cephi-v0.3.0/#{archive}"
+  url "https://github.com/cephalopodic/releases/releases/download/cephi-v0.3.1/#{archive}"
   sha256 checksum
 
   def install
