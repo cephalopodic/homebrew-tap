@@ -3,7 +3,6 @@ class Cephi < Formula
 
   desc "Cephalopodic CLI for discovering and invoking taps through the API"
   homepage "https://github.com/cephalopodic/releases"
-  version "0.7.4"
   license "MIT"
 
   host_os = RUBY_PLATFORM
