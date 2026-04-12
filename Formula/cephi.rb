@@ -3,7 +3,6 @@ class Cephi < Formula
 
   desc "Cephalopodic CLI for discovering and invoking taps through the API"
   homepage "https://github.com/cephalopodic/releases"
-  license "MIT"
 
   host_os = RUBY_PLATFORM
   host_cpu = RbConfig::CONFIG.fetch("host_cpu")
@@ -23,6 +22,7 @@ class Cephi < Formula
 
   url "https://github.com/cephalopodic/releases/releases/download/cephi-v0.7.4/#{archive}"
   sha256 checksum
+  license "MIT"
 
   def install
     bin.install "cephi"
