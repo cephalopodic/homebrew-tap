@@ -8,19 +8,19 @@ class Cephi < Formula
   host_cpu = RbConfig::CONFIG.fetch("host_cpu")
 
   if host_os.include?("darwin") && host_cpu.match?(/arm|aarch64/)
-    archive = "cephi-0.11.1-aarch64-apple-darwin.tar.gz"
-    checksum = "a145cf04cc6fc0b8f517e5c11222fd93b9f75c8299057f130fdd7815320b3334"
+    archive = "cephi-0.12.0-aarch64-apple-darwin.tar.gz"
+    checksum = "f0b9c1e92e005285471b212b224249848be8e3fc7443ca04ea82ea2b1e7e028d"
   elsif host_os.include?("darwin") && host_cpu == "x86_64"
-    archive = "cephi-0.11.1-x86_64-apple-darwin.tar.gz"
-    checksum = "b08f75915b655bf1610cdbb5523b24731aec1414b1aa001af0387a0235024a6f"
+    archive = "cephi-0.12.0-x86_64-apple-darwin.tar.gz"
+    checksum = "f8f55f92fa23b2aa4c37ada080dc2583507a11eca7125de2c1e6866e5a021d54"
   elsif host_os.include?("linux")
-    archive = "cephi-0.11.1-x86_64-unknown-linux-gnu.tar.gz"
-    checksum = "0c6039cc0929d76cbdcd662e475efaed671521c6e7119c630674e54a80943894"
+    archive = "cephi-0.12.0-x86_64-unknown-linux-gnu.tar.gz"
+    checksum = "3c19fe5a40f8660ca19c87a2da6a652018a0c69493033091c2cd9a8f8aaa4f3e"
   else
     raise "Unsupported platform for cephi: #{host_os} / #{host_cpu}"
   end
 
-  url "https://github.com/cephalopodic/releases/releases/download/cephi-v0.11.1/#{archive}"
+  url "https://github.com/cephalopodic/releases/releases/download/cephi-v0.12.0/#{archive}"
   sha256 checksum
   license "MIT"
 
